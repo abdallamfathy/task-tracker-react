@@ -26,6 +26,10 @@ function App() {
       reminder:false,
     }
   ]) 
+  /**
+   * @param  {Use state to show the added task} false
+   */
+  const [ShowAddTask, setShowAddTask] = useState(false);
   
   // Add task
   const onAdd = (task) =>{
@@ -53,13 +57,13 @@ function App() {
   
   return (
     <div className="App">
-      <Header />
+      <Header onAdd={()=> setShowAddTask(!ShowAddTask)} showAdd={ShowAddTask} />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
       ) : (
         "there is no tasks"
       )}
-      <AddTask onAdd={onAdd}/>
+      {ShowAddTask && <AddTask onAdd={onAdd}/>}
     </div>
   );
 }
