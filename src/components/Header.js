@@ -3,12 +3,10 @@ import Button from "./Button"
 
 
 const Header = () => {
-    const onClick = () =>{
-        console.log("clicked");
-      }
     return (
     <header>
         <h2>Task Tracker</h2>
+        <Button/>
     </header>
   )
 }

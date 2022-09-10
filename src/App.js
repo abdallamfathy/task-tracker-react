@@ -9,19 +9,19 @@ function App() {
   const [tasks,setTask] = useState([
     {
       id:1,
-      title:"Cinema production",
+      title:"Study Maths",
       day: "3/10/2022",
       reminder:true,
     },
     {
       id:2,
-      title:"Health and life",
+      title:"Read Quran",
       day:"4/10/2022",
       reminder:true,
     },
     {
       id:3,
-      title:"Start a new technology",
+      title:"Practice Sports",
       day: "5/3/1999",
       reminder:false,
     }
@@ -31,6 +31,7 @@ function App() {
   const onAdd = (task) =>{
     const id = Math.floor(Math.random() * 1000) + 1;
     const newTask = {id , ...task};
+    setTask([...tasks,newTask]);
 
   }
 
