@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from './Button'
 
-const Header = ({ title, onAdd, showAdd }) => {
+const Header = ({ text, onAdd, showAdd }) => {
 
   return (
     <header className='header'>
-      <h1 className='logo'>{title}</h1>
+      <h1 className='logo'>{text}</h1>
       
         <Button
           color={showAdd ? 'red' : 'green'}
@@ -19,11 +19,11 @@ const Header = ({ title, onAdd, showAdd }) => {
 }
 
 Header.defaultProps = {
-  title: 'Shooting Stars Garden',
+  text: 'Shooting Stars Garden',
 }
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
 // CSS in JS

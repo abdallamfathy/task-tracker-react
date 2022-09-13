@@ -31,6 +31,7 @@ a{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 /* sources https://unsplash.com/photos/c9OCWLka764 */
@@ -44,7 +45,7 @@ body {
   background-image: url('imgs/bike.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 250vh 100vh;
+  background-size: 200vh 100vh;
 
   
 }
